@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>折线图</title>
+</head>
+<body>
+<div id="container" style="min-width: 400px; height: 400px;"></div>
+</body>
+<script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+<script type="text/javascript">
+	var options = {
+		title: {
+			text: '2016年分地区分岗位就业人员平均工资'
+		},
+		chart: {
+			type: 'line'
+		},
+		xAxis: {
+			categories: ['东部', '中部', '西部', '东北地区']
+		},
+		yAxis: {
+			title: {
+				text: '年平均工资（元）'
+			}
+		},
+		series: [{
+			name: '全部就业人员',
+			data: [62875, 47538, 52976, 49868]
+		}, {
+			name: '中层及以上管理人员',
+			data: [144045, 88500, 104414, 98868]
+		}, {
+			name: '专业技术人员',
+			data: [87708, 57790, 65274, 59448]
+		}, {
+			name: '办事人员和相关人员',
+			data: [60379, 43599, 49119, 47403]
+		}, {
+			name: '商业、服务业人员',
+			data: [52750, 37480, 39371, 37964]
+		}, {
+			name: '生产、运输设备操作人员及相关人员',
+			data: [50119, 43385, 47770, 44140]
+		}]
+	};
+	var chart = Highcharts.chart('container', options);
+</script>
+</html>
