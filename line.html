@@ -4,7 +4,7 @@
 	<title>折线图</title>
 </head>
 <body>
-<div id="container" style="min-width: 400px; height: 400px;"></div>
+<div id="container" style="min-width: 400px; width: 800px; height: 400px;"></div>
 </body>
 <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
 <script type="text/javascript">
@@ -22,6 +22,11 @@
 			title: {
 				text: '年平均工资（元）'
 			}
+		},
+		legend: {
+			align: 'right',
+			layout: 'vertical',
+			verticalAlign: 'middle'
 		},
 		series: [{
 			name: '全部就业人员',
@@ -41,7 +46,15 @@
 		}, {
 			name: '生产、运输设备操作人员及相关人员',
 			data: [50119, 43385, 47770, 44140]
-		}]
+		}],
+		plotOptions: {
+			line: {
+				dataLabels: {
+					enabled: true
+				},
+				enableMouseTracking: false
+			}
+		}
 	};
 	var chart = Highcharts.chart('container', options);
 </script>
